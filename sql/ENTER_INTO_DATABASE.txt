@@ -1,0 +1,25 @@
+DROP TABLE if EXISTS `video_g`;
+
+CREATE TABLE `video_games` (
+title varchar(100),
+genre varchar(50),
+release_date date,
+release_price decimal(5,2),
+metacritic_score int(101)
+);
+
+INSERT INTO `video_games` (title, genre, release_date, release_price, metacritic_score) VALUES 
+('Minecraft', 'Sandbox', '2011-11-18', 26.95, 93),
+('The Legend of Zelda: Breath of the Wild', 'Adventure', '2017-3-3', 59.99, 97),
+('Metal Gear Solid V: The Phantom Pain', 'Stealth', '2015-9-1', 59.99, 93),
+('Doom', 'Shooter', '1993-12-10', 40.00, 83),
+('The Elder Scrolls V: Skyrim', 'RPG', '2011-11-11', 59.99, 94),
+('Civilization V', 'Strategy', '2014-6-10', 59.99, 90),
+('Pokémon Emerald','Adventure', '2004-9-16', 30.00, 76),
+('Spore', 'Simulation', '2008-9-7', 30.00, 84),
+('Crash Bandicoot', 'Platformer', '1996-9-9', 50.00, 0.0),
+('Halo: Combat Evolved', 'Shooter', '2001-11-15', 49.99, 97)
+
+
+
+
