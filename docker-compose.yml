@@ -2,13 +2,17 @@ version: '4.12.0'
 services:
   php-apache-environment:
     container_name: php-side
-    image: php:8.0-apache
+    build:
+        context: ./php
+        dockerfile: Dockerfile
+    depends_on:
+        - db
     volumes:
       - ./php/src:/var/www/html/
     ports:
       - 8000:80
   db:
-    container_name: video_game_prices
+    container_name: video_games_database
     image: mysql
     restart: always
     environment:
@@ -18,4 +22,12 @@ services:
         MYSQL_PASSWORD: password
     ports:
       - 9906:3306
-    
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin
+    ports:
+        - '8080:80'
+    restart: always
+    environment:
+        PMA_HOST: db
+    depends_on:
+        - db
