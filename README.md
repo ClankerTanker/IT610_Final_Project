@@ -9,7 +9,7 @@
 3. Access myphpadmin by typing in your browser, localhost:8080
 4. Log in using db username and password found in docker-compose.yml file (Should be user and password).
 5. Access and copy text in ENTER_INTO_DATABASE.txt (Found in sql folder)
-6. Paste the text in phpMyAdmin's SQL tab, and click on go.
+6. Paste the text in phpMyAdmin's SQL tab, and click on go. ("Go" button found also in the SQL tab, in the lower bottom page.)
 	You now have a working table inside the database!
 7. Access in your browser localhost:8000 and you should see the table there!
 
